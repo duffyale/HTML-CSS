@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <script>
+    function validate(inputnum){
+      var num = /^[0-9]+$/;
+      if(inputnum.value.match(num))
+        {}
+      else {
+      alert("联系电话必须由数字组成");
+      }
+      }
+
+    function check(inputnumstring){
+      var a = /^[0-9A-Za-z]+$/;
+      if(inputnumstring.value.match(a)){
+      }
+      else{
+      alert("工号必须由数字和字母组成");
+      }
+      }
+
+    function see(name){
+      if((name.name.value).length>2){
+       }
+      else {
+      alert("fail");
+      }
+      }
+
+
+  </script>
+
+
+  <style>
+    td{
+      color:grey;
+      font-weight: bold;
+    }
+
+
+  </style>
+
+
+
+
+  <body>
+    <table id="mytable">
+      <tr>
+        <td>姓名</td>
+        <td><input type = "text" name="name" id="name" maxlength="10" min="2"></td>
+      </tr>
+
+      <tr>
+        <td>工号</td>
+        <td><input type = "text" name="workingnumber" id="inputnumstring"></td>
+      </tr>
+
+      <tr>
+        <td>学历</td>
+        <td><select name="edu">
+          <option value="o1">中专</option>
+          <option value="o2">大专</option>
+          <option value="o3">全日制本科</option>
+          <option value="o4">硕士</option>
+          <option value="o5">博士</option>
+        </select></td>
+      </tr>
+
+      <tr>
+        <td>婚况</td>
+        <td>是<input type = "radio" name="marrage" id="marrage" value="是">
+          否<input type = "radio" name="marrage" id="marriage" value ="否"></td>
+      </tr>
+
+      <tr>
+        <td>联系电话</td>
+        <td><input type="text" maxlength="11" id="inputnum">
+        </td>
+      </tr>
+
+      <tr>
+        <td>邮箱</td>
+        <td>
+          <input type="text" name="email">
+        </td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="增加" onclick='addrow();'></td>
+        <td><input type="button" value="保存" onclick = 'validate(inputnum);check(inputnumstring);see(name);'></td>
+      </tr>
+
+
+
+    </tabel>
+
+
+  </body>
+
+</html>
